@@ -3,7 +3,7 @@ use std::io::{self, BufRead};
 
 fn main() {
     
-    let mut file = match File::open("input.txt") {
+    let mut file = match File::open("../input.txt") {
         Ok(f) => f,
         Err(err) => panic!("{}", err)
     };
@@ -13,7 +13,6 @@ fn main() {
     for line in lines {
             if let Ok(line) = line {
                 let i : isize = line.parse().expect("could not parse input");
-                println!("{}", i);
                 input.push(i);
             }
     }
