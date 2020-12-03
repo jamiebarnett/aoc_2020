@@ -1,14 +1,6 @@
 use std::fs::File;
 use std::io::{self, BufRead};
 
-#[derive(Debug, Clone)]
-struct PasswordPolicy {
-    min: usize,
-    max: usize,
-    character: String,
-    password: String,
-}
-
 fn main() {
     
     let file = match File::open("../input.txt") {
