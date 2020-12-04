@@ -12,7 +12,9 @@ fn main() {
     let lines : Vec<&str> = buffer.split("\n\n").collect();
     let mut valid_passport_count = 0;
     for line in lines {
+        
         println!("{:?}", line);
+        
         if !line.contains("ecl"){
             continue
         }
